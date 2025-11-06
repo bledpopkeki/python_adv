@@ -57,7 +57,7 @@
 # # if age >= 18:
 # #     print("You can vote")
 # # else:
-# #     print("You cant vote")
+# #     prinst("You cant vote")
 # temp = 28
 # if temp > 30:
 #     print("Its a hot day")
