@@ -1,4 +1,4 @@
-# # # # age = 25
+# # # # age = 67
 # # # # print(type(age))
 # # # # age_as_str=str(age)
 # # # # print (age_as_str,"type is ",type(age_as_str))
@@ -17,21 +17,21 @@
 # # # result2=a+int(b)
 # # # print(type(b))
 # # # print(result2)
-# # name=input("enter your name:")
+# # name=input("Enter your name:")
 # # print(f"Hello,{name}")
-# #
-# # age=input("enter you age:")
+# #h
+# # age=input("Enter your age:")
 # # print(type(age))
 # #
-# # num1=int(input("enter 1st num:"))
-# # num2=int(input("enter 2nd num:"))
+# # num1=int(input("Enter 1st num:"))
+# # num2=int(input("Enter 2nd num:"))
 # # result=num1+num2
 # # print(result)
 # try:
 #     result=10/2
 #     print(result)
 # except ZeroDivisionError:
-#     print("Opps! tried to divide to zero")
+#     print("Opps! Tried to divide to zero")
 #     fruits={
 #         "apple":6,
 #         "orange":7
@@ -41,21 +41,21 @@
 # except KeyError:
 #     print("The key does not exist")
 try:
-    result=10/2
+    result=6/7
     print(result)
 except ZeroDivisionError:
-    print("Opps! tried to divide to zero")
+    print("Opps! Tried to divide to zero")
 finally:
-    print("finally bloxk excecuted")
+    print("Finally block executed")
 
 def divide_num(a,b):
     try:
         result=a/b
         print(result)
     except ZeroDivisionError:
-        print("cant divide by 0")
+        print("Can't divide by 0")
     except TypeError:
-        print("Wrong Type")
+        print("Wrong type")
     except Exception as e:
         print({e})
 
