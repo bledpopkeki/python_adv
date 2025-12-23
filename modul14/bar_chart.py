@@ -17,7 +17,7 @@ bars=plt.bar(filtered_df["Country"],filtered_df["Average IQ"],color="skyblue")
 plt.title("Average IQ by Country (IQ>=100)",fontsize=16)
 
 plt.xlabel("Country",fontsize=14)
-plt.ylabel("Average Iq", fontsize=14)
+plt.ylabel("Average  Iq", fontsize=14)
 
 plt.xticks(rotation=90, fontsize=10)
 plt.yticks(fontsize=10)

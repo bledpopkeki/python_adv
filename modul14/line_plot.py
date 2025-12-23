@@ -12,7 +12,7 @@ avg_iq_by_continent.plot(kind='line',marker='o',color='skyblue')
 
 plt.title=('Average Iq by Continent')
 plt.xlabel('Continent')
-plt.ylabel('Average IQ')
+plt.ylabel('Average  IQ')
 
 plt.grid(axis='both',linestyle="--",alpha=0.7)
 

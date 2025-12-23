@@ -14,7 +14,7 @@ plt.figure(figsize=(10,10))
 novel_prices_by_continent.plot(kind="pie",colors=colors,autopct="%1.1f%%")
 
 plt.title('Distrubiton of Nobel prices by continent')
-plt.axis('equal')
+plt.axis('equal ')
 plt.ylabel('')
 
 plt.tight_layout()
