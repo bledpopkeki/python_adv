@@ -1,3 +1,4 @@
+from modul18.app import total_books, unique_titles, average_rating, top_titles
 from modul9.polymorphism.built import max_value
 import...
 
@@ -41,3 +42,40 @@ selected_genre = st.sidebar.selectbox("Select Genre", ["All"]+ list(books_df['Ge
 min_rating = st.sidebar.slider("Maximum user rating" , 0.0 , 5.0 , 0.1)
 max_price = st.sidebar.slider("Max Price ", 0 , books_df['Price'].max(), books_df['Price'].max())
 
+if selected_author != "All":
+    filtered_books_df = filtered_books_df[filtered_books_df['Author'] == selcted_author]
+if selected_author != "All":
+    filtered_books_df = filtered_books_df[filtered_books_df['Year'] == selected_year]
+if selected_author != "All":
+    filtered_books_df = filtered_books_df[filtered_books_df['Genre'] == selcted_genre]
+
+filtered_books_df = filtered_books_df[
+    (filtered_books_df['User Rating'] >= min_rating) & (filtered_books_df['Price'] <= max_price)
+]
+
+
+st.subheader("Summary Statistics")
+total_books = filtered_books_df.shape[0]
+unique_titles = filtered_books_df['Name'].nunique()
+average_rating = filtered_books_df['User Rating'].mean()
+average_price = filtered_books_df['Price'].mean()
+
+col1, col2,col3,col4 = st.columns(4)
+col1.metric("Total Books", total_books)
+col2.metric("Unique titles", unique_titles)
+col3.metric("Average Rating", average_rating)
+col4.metric("Average Price", average_price)
+
+st.subheader("Dataset Preview")
+st.write(filtered_books_df.head())
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Top 10 selling books")
+    top_titles = filtered_books_df['Name'].value_counts().head(10)
+    st.bar_chart(top_titles)
+with col2:
+    st.subheader("Top 10 Authors")
+    top_titles = filtered_books_df['Author'].value_counts().head(10)
+    st.bar_chart(top_authors)
